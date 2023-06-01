@@ -1,0 +1,12 @@
+#var for jenkins version
+v1: 2.406
+v2: 2.346
+v3: 2.357
+v4: 2.405
+# for debian
+urld: https://pkg.jenkins.io/debian-stable/jenkins.io.key
+pp: deb https://pkg.jenkins.io/debian-stable binary/
+#https://pkg.jenkins.io/debian-stable/jenkins.io-2023.key
+#for Redhat
+urlr: https://pkg.jenkins.io/redhat-stable/jenkins.repo
+keyr: https://pkg.jenkins.io/redhat-stable/jenkins.io.key

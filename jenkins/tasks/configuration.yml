@@ -1,0 +1,8 @@
+---
+  - name: change configuration of jenkins via templating
+    template:
+      src: config.xml.j2
+      dest: /var/lib/jenkins/config.xml
+      mode: "0755"
+    notify: 
+      - restart jenkins service

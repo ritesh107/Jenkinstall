@@ -1,0 +1,15 @@
+---
+  - name: download Jenkins from url
+    get_url:
+      url: "{{ urlr }}"
+      dest: /etc/yum.repos.d/jenkins.repo
+    when: ansible_os_family == "RedHat"
+  
+    # For Debian based Os
+  - name: Add Jenkins apt repository entry
+    apt_repository:
+      repo: 'deb https://pkg.jenkins.io/debian binary/'
+      state: present
+    when: ansible_os_family == "Debian"
+
+

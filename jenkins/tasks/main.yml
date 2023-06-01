@@ -1,0 +1,12 @@
+---
+    - name: import_key
+      import_tasks: key.yml
+
+    - name: add repository
+      import_tasks: repo.yml
+
+    - name: dependency & packages
+      import_tasks: dependency_package.yml
+
+   # - name: configuration of jenkins via jinja templating
+    #  import_tasks: configuration.yml

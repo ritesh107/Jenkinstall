@@ -1,0 +1,27 @@
+---
+#for redhar
+  - name: update cache
+    yum:
+      name: '*'
+      state: latest
+    when: ansible_os_family == "RedHat"
+  
+  - name: Install jenkins
+    yum:
+      name: 
+      - java-11-openjdk-devel
+      - jenkins={{ v1 }}
+      state: latest
+    when: ansible_os_family == "RedHat"
+#for debian
+  #- name: update cache
+   # apt:
+    #s  update_cache: true
+  - name: Update packages and install Jenkins
+    apt:
+      update_cache: true
+      name: "{{ item }}"
+      state: present
+    loop:
+      - openjdk-11-jdk
+      - jenkins={{ v1 }}

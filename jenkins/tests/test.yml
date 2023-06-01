@@ -1,0 +1,6 @@
+---
+  - hosts: jnk2
+    become: true
+    roles:
+        - jenkins
+ 
